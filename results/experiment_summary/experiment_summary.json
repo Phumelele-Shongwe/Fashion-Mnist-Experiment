@@ -1,0 +1,474 @@
+{
+    "experiment": "Fashion-MNIST CNN Comparison",
+    "configuration": {
+        "seed": 76,
+        "epochs": 10,
+        "batch_size": 64,
+        "learning_rate": 0.001,
+        "optimizer": "Adam",
+        "loss_function": "CrossEntropyLoss",
+        "validation_fraction": 0.1
+    },
+    "models": {
+        "LeNet-5": {
+            "model": "LeNet-5",
+            "architecture": {
+                "trainable_parameters": 60850
+            },
+            "training": {
+                "epochs_completed": 10,
+                "best_validation_accuracy": 0.897,
+                "best_accuracy_epoch": 9,
+                "lowest_validation_loss": 0.2811239495277405,
+                "lowest_loss_epoch": 9,
+                "final_training_accuracy": 0.9235555555555556,
+                "final_validation_accuracy": 0.8951666666666667,
+                "final_training_loss": 0.20816980825971673,
+                "final_validation_loss": 0.28726309196154276,
+                "final_accuracy_gap": 0.028388888888888908,
+                "final_loss_gap": 0.07909328370182603,
+                "total_training_time_seconds": 889.5805195001885
+            },
+            "test": {
+                "model": "LeNet-5",
+                "checkpoint_epoch": 9,
+                "test_samples": 10000,
+                "loss": 0.3082602265775204,
+                "accuracy": 0.8909,
+                "macro_precision": 0.8910394049897986,
+                "macro_recall": 0.8908999999999999,
+                "macro_f1": 0.8907143867159297,
+                "weighted_precision": 0.8910394049897986,
+                "weighted_recall": 0.8909,
+                "weighted_f1": 0.8907143867159297,
+                "confusion_matrix": [
+                    [
+                        832,
+                        2,
+                        19,
+                        29,
+                        4,
+                        2,
+                        103,
+                        0,
+                        9,
+                        0
+                    ],
+                    [
+                        1,
+                        971,
+                        3,
+                        16,
+                        2,
+                        0,
+                        5,
+                        0,
+                        2,
+                        0
+                    ],
+                    [
+                        15,
+                        0,
+                        779,
+                        12,
+                        114,
+                        0,
+                        76,
+                        0,
+                        4,
+                        0
+                    ],
+                    [
+                        17,
+                        5,
+                        14,
+                        906,
+                        28,
+                        0,
+                        25,
+                        0,
+                        5,
+                        0
+                    ],
+                    [
+                        1,
+                        1,
+                        50,
+                        38,
+                        842,
+                        0,
+                        66,
+                        0,
+                        2,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        971,
+                        0,
+                        17,
+                        2,
+                        9
+                    ],
+                    [
+                        98,
+                        3,
+                        71,
+                        29,
+                        75,
+                        0,
+                        712,
+                        0,
+                        12,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        16,
+                        0,
+                        946,
+                        0,
+                        38
+                    ],
+                    [
+                        1,
+                        0,
+                        3,
+                        4,
+                        5,
+                        1,
+                        1,
+                        1,
+                        982,
+                        2
+                    ],
+                    [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        9,
+                        0,
+                        23,
+                        0,
+                        968
+                    ]
+                ],
+                "classification_report": {
+                    "T-shirt/top": {
+                        "precision": 0.8621761658031089,
+                        "recall": 0.832,
+                        "f1-score": 0.8468193384223919,
+                        "support": 1000.0
+                    },
+                    "Trouser": {
+                        "precision": 0.9887983706720977,
+                        "recall": 0.971,
+                        "f1-score": 0.9798183652875883,
+                        "support": 1000.0
+                    },
+                    "Pullover": {
+                        "precision": 0.8296059637912673,
+                        "recall": 0.779,
+                        "f1-score": 0.8035069623517277,
+                        "support": 1000.0
+                    },
+                    "Dress": {
+                        "precision": 0.8753623188405797,
+                        "recall": 0.906,
+                        "f1-score": 0.8904176904176904,
+                        "support": 1000.0
+                    },
+                    "Coat": {
+                        "precision": 0.7869158878504673,
+                        "recall": 0.842,
+                        "f1-score": 0.8135265700483092,
+                        "support": 1000.0
+                    },
+                    "Sandal": {
+                        "precision": 0.9719719719719719,
+                        "recall": 0.971,
+                        "f1-score": 0.9714857428714357,
+                        "support": 1000.0
+                    },
+                    "Shirt": {
+                        "precision": 0.7206477732793523,
+                        "recall": 0.712,
+                        "f1-score": 0.716297786720322,
+                        "support": 1000.0
+                    },
+                    "Sneaker": {
+                        "precision": 0.9584599797365755,
+                        "recall": 0.946,
+                        "f1-score": 0.9521892299949672,
+                        "support": 1000.0
+                    },
+                    "Bag": {
+                        "precision": 0.9646365422396856,
+                        "recall": 0.982,
+                        "f1-score": 0.9732408325074331,
+                        "support": 1000.0
+                    },
+                    "Ankle boot": {
+                        "precision": 0.951819075712881,
+                        "recall": 0.968,
+                        "f1-score": 0.9598413485374319,
+                        "support": 1000.0
+                    },
+                    "accuracy": 0.8909,
+                    "macro avg": {
+                        "precision": 0.8910394049897986,
+                        "recall": 0.8908999999999999,
+                        "f1-score": 0.8907143867159297,
+                        "support": 10000.0
+                    },
+                    "weighted avg": {
+                        "precision": 0.8910394049897986,
+                        "recall": 0.8909,
+                        "f1-score": 0.8907143867159297,
+                        "support": 10000.0
+                    }
+                }
+            }
+        },
+        "VGG": {
+            "model": "VGG",
+            "architecture": {
+                "trainable_parameters": 2308234
+            },
+            "training": {
+                "epochs_completed": 10,
+                "best_validation_accuracy": 0.9176666666666666,
+                "best_accuracy_epoch": 6,
+                "lowest_validation_loss": 0.23173526493708294,
+                "lowest_loss_epoch": 6,
+                "final_training_accuracy": 0.9518888888888889,
+                "final_validation_accuracy": 0.9165,
+                "final_training_loss": 0.12895294674458327,
+                "final_validation_loss": 0.24272021210193634,
+                "final_accuracy_gap": 0.035388888888888914,
+                "final_loss_gap": 0.11376726535735307,
+                "total_training_time_seconds": 1835.6528422008269
+            },
+            "test": {
+                "model": "VGG",
+                "checkpoint_epoch": 6,
+                "test_samples": 10000,
+                "loss": 0.24755181264877318,
+                "accuracy": 0.9147,
+                "macro_precision": 0.9145374199834526,
+                "macro_recall": 0.9147000000000001,
+                "macro_f1": 0.9143824775145564,
+                "weighted_precision": 0.9145374199834527,
+                "weighted_recall": 0.9147,
+                "weighted_f1": 0.9143824775145564,
+                "confusion_matrix": [
+                    [
+                        832,
+                        0,
+                        15,
+                        21,
+                        3,
+                        1,
+                        119,
+                        0,
+                        9,
+                        0
+                    ],
+                    [
+                        0,
+                        984,
+                        0,
+                        10,
+                        3,
+                        0,
+                        1,
+                        0,
+                        2,
+                        0
+                    ],
+                    [
+                        21,
+                        0,
+                        886,
+                        11,
+                        44,
+                        0,
+                        35,
+                        0,
+                        3,
+                        0
+                    ],
+                    [
+                        6,
+                        11,
+                        8,
+                        948,
+                        9,
+                        0,
+                        16,
+                        0,
+                        2,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        32,
+                        47,
+                        845,
+                        0,
+                        75,
+                        0,
+                        1,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        976,
+                        0,
+                        14,
+                        1,
+                        9
+                    ],
+                    [
+                        80,
+                        2,
+                        65,
+                        31,
+                        58,
+                        0,
+                        753,
+                        0,
+                        11,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        10,
+                        0,
+                        970,
+                        0,
+                        20
+                    ],
+                    [
+                        2,
+                        1,
+                        0,
+                        3,
+                        1,
+                        0,
+                        1,
+                        0,
+                        992,
+                        0
+                    ],
+                    [
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        9,
+                        0,
+                        29,
+                        0,
+                        961
+                    ]
+                ],
+                "classification_report": {
+                    "T-shirt/top": {
+                        "precision": 0.8841657810839533,
+                        "recall": 0.832,
+                        "f1-score": 0.8572900566718187,
+                        "support": 1000.0
+                    },
+                    "Trouser": {
+                        "precision": 0.9859719438877755,
+                        "recall": 0.984,
+                        "f1-score": 0.984984984984985,
+                        "support": 1000.0
+                    },
+                    "Pullover": {
+                        "precision": 0.8798411122144985,
+                        "recall": 0.886,
+                        "f1-score": 0.8829098156452416,
+                        "support": 1000.0
+                    },
+                    "Dress": {
+                        "precision": 0.8851540616246498,
+                        "recall": 0.948,
+                        "f1-score": 0.9154997585707387,
+                        "support": 1000.0
+                    },
+                    "Coat": {
+                        "precision": 0.877466251298027,
+                        "recall": 0.845,
+                        "f1-score": 0.8609271523178808,
+                        "support": 1000.0
+                    },
+                    "Sandal": {
+                        "precision": 0.9799196787148594,
+                        "recall": 0.976,
+                        "f1-score": 0.9779559118236473,
+                        "support": 1000.0
+                    },
+                    "Shirt": {
+                        "precision": 0.753,
+                        "recall": 0.753,
+                        "f1-score": 0.753,
+                        "support": 1000.0
+                    },
+                    "Sneaker": {
+                        "precision": 0.9575518262586377,
+                        "recall": 0.97,
+                        "f1-score": 0.9637357178340785,
+                        "support": 1000.0
+                    },
+                    "Bag": {
+                        "precision": 0.9715964740450539,
+                        "recall": 0.992,
+                        "f1-score": 0.9816922315685305,
+                        "support": 1000.0
+                    },
+                    "Ankle boot": {
+                        "precision": 0.9707070707070707,
+                        "recall": 0.961,
+                        "f1-score": 0.9658291457286432,
+                        "support": 1000.0
+                    },
+                    "accuracy": 0.9147,
+                    "macro avg": {
+                        "precision": 0.9145374199834526,
+                        "recall": 0.9147000000000001,
+                        "f1-score": 0.9143824775145564,
+                        "support": 10000.0
+                    },
+                    "weighted avg": {
+                        "precision": 0.9145374199834527,
+                        "recall": 0.9147,
+                        "f1-score": 0.9143824775145564,
+                        "support": 10000.0
+                    }
+                }
+            }
+        }
+    }
+}
