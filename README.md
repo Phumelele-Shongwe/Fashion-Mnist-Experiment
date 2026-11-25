@@ -94,47 +94,83 @@ Both models use the same training engine and evaluation procedures.
 
 The best model checkpoint is selected using validation accuracy, with validation loss used as a tie-breaker.
 
+
 ## 6. Project Structure
 
 ```text
 Fashion_Mnist_Experiment/
-â”‚
-â”œâ”€â”€ configs/
-â”‚   â””â”€â”€ experiment_config.py
-â”‚
-â”œâ”€â”€ data/
-â”‚
-â”œâ”€â”€ models/
-â”‚   â”œâ”€â”€ checkpoints/
-â”‚   â””â”€â”€ model_summaries/
-â”‚
-â”œâ”€â”€ notebooks/
-â”‚
-â”œâ”€â”€ results/
-â”‚   â”œâ”€â”€ lenet5/
-â”‚   â”‚   â”œâ”€â”€ metrics/
-â”‚   â”‚   â”œâ”€â”€ plots/
-â”‚   â”‚   â””â”€â”€ predictions/
-â”‚   â”‚
-â”‚   â”œâ”€â”€ vgg/
-â”‚   â”‚   â”œâ”€â”€ metrics/
-â”‚   â”‚   â”œâ”€â”€ plots/
-â”‚   â”‚   â””â”€â”€ predictions/
-â”‚   â”‚
-â”‚   â””â”€â”€ experiment_summary/
-â”‚
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ architectures/
-â”‚   â”œâ”€â”€ preprocessing/
-â”‚   â”œâ”€â”€ training/
-â”‚   â”œâ”€â”€ evaluation/
-â”‚   â””â”€â”€ utils/
-â”‚
-â”œâ”€â”€ tests/
-â”œâ”€â”€ requirements.txt
-â”œâ”€â”€ README.md
-â””â”€â”€ .gitignore
+|
+|-- configs/
+|   |-- __init__.py
+|   |-- experiment_config.py
+|
+|-- results/
+|   |-- experiment_summary/
+|   |   |-- experiment_report.md
+|   |   |-- experiment_summary.json
+|   |   |-- model_comparison.csv
+|   |
+|   |-- lenet5/
+|   |   |-- metrics/
+|   |   |   |-- confusion_matrix.csv
+|   |   |   |-- test_metrics.json
+|   |   |   |-- training_history.json
+|   |   |
+|   |   |-- plots/
+|   |       |-- accuracy_curve.png
+|   |       |-- confusion_matrix_normalised.png
+|   |       |-- confusion_matrix_raw.png
+|   |       |-- loss_curve.png
+|   |
+|   |-- vgg/
+|       |-- metrics/
+|       |   |-- confusion_matrix.csv
+|       |   |-- test_metrics.json
+|       |   |-- training_history.json
+|       |
+|       |-- plots/
+|           |-- accuracy_curve.png
+|           |-- confusion_matrix_normalised.png
+|           |-- confusion_matrix_raw.png
+|           |-- loss_curve.png
+|
+|-- src/
+|   |-- architectures/
+|   |   |-- __init__.py
+|   |   |-- lenet5.py
+|   |   |-- vgg.py
+|   |
+|   |-- preprocessing/
+|   |   |-- __init__.py
+|   |   |-- common.py
+|   |
+|   |-- training/
+|   |   |-- __init__.py
+|   |   |-- trainer.py
+|   |   |-- train_lenet5.py
+|   |   |-- train_vgg.py
+|   |
+|   |-- evaluation/
+|   |   |-- __init__.py
+|   |   |-- analyse_training_history.py
+|   |   |-- evaluate_lenet5.py
+|   |   |-- evaluate_vgg.py
+|   |   |-- evaluator.py
+|   |   |-- plot_confusion_matrix.py
+|   |   |-- plot_training_history.py
+|   |   |-- summarise_experiment.py
+|   |
+|   |-- utils/
+|       |-- __init__.py
+|
+|-- verify_trainer.py
+|-- verify_training_setup.py
+|-- requirements.txt
+|-- README.md
+|-- .gitignore
 ```
+
+**Note:** Dataset files, virtual environments, and model checkpoints are generated or stored locally and excluded from version control.
 
 ## 7. Installation
 
