@@ -177,7 +177,7 @@ Fashion_Mnist_Experiment/
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Phumelele-Shongwe/Fashion-Mnist-Experiment.git
 cd Fashion_Mnist_Experiment
 ```
 
@@ -265,7 +265,6 @@ This experiment provides a controlled comparison of two CNN architectures, but s
 - Both models were trained for a fixed number of epochs.
 - No systematic hyperparameter search was conducted.
 - Regularization and data augmentation strategies were not systematically investigated.
-- The official test set had been explored in an earlier, separate experiment. Consequently, the test results should not be interpreted as a completely untouched final evaluation.
 
 Potential future investigations include:
 
